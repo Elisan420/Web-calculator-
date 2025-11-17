@@ -1,10 +1,15 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 body {
     background-color: #f2f2f2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
 }
 .Calculator{
 background-color: #2ff;
@@ -12,6 +17,7 @@ border-radius: 15px;
 padding: 20px;
 box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 width: 300px;
+max-width: 90vw;
 }
 #display-box{
     background-color: #000;
