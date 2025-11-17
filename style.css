@@ -1,30 +1,35 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+
 body {
     background-color: #f2f2f2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
+/* Calculator container */
+.Calculator {
+    background-color: #2ff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center child elements horizontally */
+    box-sizing: border-box;
 }
-.Calculator{
-background-color: #2ff;
-border-radius: 15px;
-padding: 20px;
-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-width: 300px;
-max-width: 90vw;
-}
-#display-box{
+
+/* Display box centered inside calculator */
+#display-box {
     background-color: #000;
     color: #0f0;
     font-size: 2em;
     border: none;
-    width: 100%;
+    width: 100%;              /* slightly smaller than container */
+    max-width: 280px;        /* keeps proportions consistent */
     height: 80px;
     text-align: right;
     padding: 10px;
@@ -35,24 +40,30 @@ max-width: 90vw;
     flex-direction: column;
     justify-content: space-between;
 }
+
+/* Expression and result text */
 #expression {
-  font-size: 30px;
-  color: #fff;
-  text-align: left;
-  font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
 }
 
 #result {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: right;
-  }
-.buttons{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
 }
-button{
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Common button styling */
+button {
     font-size: 1.2rem;
     padding: 15px;
     border: 1px solid #fff;
@@ -62,28 +73,36 @@ button{
     cursor: pointer;
     transition: 0.3s;
 }
-button:active {
-  transform: scale(0.95);
-}
-button:hover{
+
+button:hover {
     background-color: #555;
 }
-.operator{
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Operator buttons */
+.operator {
     background-color: #ff9500;
 }
-.operator:hover{
+.operator:hover {
     background-color: #e08900;
 }
-.equal{
+
+/* Equal button spanning 2 columns */
+.equal {
     background-color: #00cc66;
     grid-column: span 2;
 }
-.equal:hover{
+.equal:hover {
     background-color: #00994d;
 }
-.clear{
+
+/* Clear button */
+.clear {
     background-color: #cc0000;
 }
-.clear:hover{
+.clear:hover {
     background-color: #990000;
-}
+    }
